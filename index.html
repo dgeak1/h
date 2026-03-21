@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detailed Minutes of Meeting - NACOS Executive Board</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
     <style>
         :root {
             --paper-white: #ffffff;
@@ -85,9 +87,13 @@
 </head>
 <body>
 
-    <div class="controls">
-        <button onclick="window.print()">Download Detailed Minutes (PDF)</button>
+ <div class="controls">
+    <button onclick="downloadPDF()">Download Detailed Minutes (PDF)</button>
+</div>
+
+<div id="minutes-content">
     </div>
+
 
     <div class="paper" id="minutes">
         <header>
@@ -156,6 +162,22 @@
             </div>
         </div>
     </div>
+    <script>
+    function downloadPDF() {
+    const element = document.getElementById('minutes-content');
+    const options = {
+        margin:       0.5,
+        filename:     'Detailed_Minutes.pdf',
+        image:        { type: 'jpeg', quality: 0.98 },
+        html2canvas:  { scale: 2, useCORS: true }, // Higher scale = better alignment/clarity
+        jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
+    };
+
+    html2pdf().set(options).from(element).save();
+}
+</script>
 
 </body>
+
+
 </html>
