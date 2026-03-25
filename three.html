@@ -3,137 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Insect Superorganism | Educational Portal</title>
+    <title>The Insect Superorganism | Educational Hub</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"/>
     <style>
         .glass {
             background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            transition: all 0.3s ease;
+        }
+        .glass:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
         }
         .hero-gradient {
-            background: radial-gradient(circle at top right, #1e3a8a, #0f172a);
+            background: radial-gradient(circle, #2563eb, #1e3a8a, #0f172a);
+        }
+        .info-card:hover {
+            background-color: rgba(255, 186, 8, 0.1);
+            border-left: 4px solid #fb8500;
         }
     </style>
 </head>
 <body class="bg-slate-950 text-slate-200 font-sans selection:bg-amber-500 selection:text-black">
 
+    <!-- Navbar -->
     <nav class="sticky top-0 z-50 glass px-6 py-4 flex justify-between items-center">
         <div class="text-amber-500 font-bold text-xl tracking-tighter">
             <i class="fas fa-bug mr-2"></i>ENTOMOLOGY HUB
         </div>
-        <div class="hidden md:flex space-x-8 text-sm font-medium uppercase tracking-widest">
-            <a href="#generations" class="hover:text-amber-500 transition">Generations</a>
-            <a href="#survival" class="hover:text-amber-500 transition">Survival</a>
-            <a href="#conservation" class="hover:text-amber-500 transition">Ethics</a>
+        <div class="hidden md:flex space-x-8 text-sm uppercase tracking-widest">
+            <a href="generations.html" class="hover:text-amber-500 transition">Generations</a>
+            <a href="survival.html" class="hover:text-amber-500 transition">Survival</a>
+            <a href="conservation.html" class="hover:text-amber-500 transition">Ethics</a>
+            <a href="species.html" class="hover:text-amber-500 transition">Species</a>
+            <a href="gallery.html" class="hover:text-amber-500 transition">Gallery</a>
+        </div>
+        <div class="text-sm md:hidden">
+            <i class="fas fa-bars text-amber-500"></i>
         </div>
     </nav>
 
+    <!-- Hero Section -->
     <header class="hero-gradient py-24 px-6 text-center border-b border-white/10">
         <h1 class="text-5xl md:text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-600 mb-6">
-            The World of Superorganisms
+            Explore the World of Insects
         </h1>
         <p class="max-w-2xl mx-auto text-lg text-slate-400">
-            Beyond the "pest" label lies a sophisticated multi-generational civilization that powers the Earth's biological operating system.
+            Discover how insects shape our planet through their roles in ecosystems, biological adaptations, and incredible evolution stories.
         </p>
+        <a href="gallery.html" class="inline-block mt-8 px-6 py-2 bg-amber-500 text-black font-bold rounded-full shadow hover:bg-amber-600 transition-all">
+            Browse Gallery
+        </a>
     </header>
 
-    <main class="container mx-auto px-6 py-12 space-y-24">
+    <!-- Sections -->
+    <main class="container mx-auto px-6 py-12 space-y-20">
 
-        <section id="generations" class="grid md:grid-cols-2 gap-12 items-center">
+        <!-- Generational Mastery -->
+        <section data-aos="fade-up" class="grid md:grid-cols-2 gap-12 items-center">
             <div>
                 <h2 class="text-3xl font-bold mb-6 flex items-center">
                     <span class="text-amber-500 mr-4">01.</span> Generational Mastery
                 </h2>
-                <p class="text-slate-400 mb-6 text-lg">
-                    Insects use <strong>Holometabolism</strong> (complete metamorphosis) to ensure the survival of the species. By having larvae and adults occupy different niches, they eliminate generational competition.
+                <p class="text-lg text-slate-400 mb-6">
+                    Insects use <strong>Holometabolism</strong> to ensure survival across generations, reducing competition through different niches.
                 </p>
-                <div class="space-y-4">
-                    <div class="glass p-4 rounded-xl flex items-start">
-                        <i class="fas fa-dna mt-1 mr-4 text-amber-500"></i>
-                        <div>
-                            <h4 class="font-bold">Genetic Redundancy</h4>
-                            <p class="text-sm text-slate-500">High offspring counts allow for rapid evolutionary filtering against environmental changes.</p>
-                        </div>
-                    </div>
-                    <div class="glass p-4 rounded-xl flex items-start">
-                        <i class="fas fa-microchip mt-1 mr-4 text-amber-500"></i>
-                        <div>
-                            <h4 class="font-bold">Information Transfer</h4>
-                            <p class="text-sm text-slate-500">Pheromonal trails act as a persistent database for future generations to find resources.</p>
-                        </div>
-                    </div>
-                </div>
+                <a href="generations.html" class="inline-block px-4 py-2 glass text-sm text-amber-500 font-bold hover:bg-amber-500 hover:text-black transition">
+                    Learn More
+                </a>
             </div>
-            <div class="rounded-3xl overflow-hidden border border-white/10 shadow-2xl shadow-amber-900/10">
-                <img src="https://images.unsplash.com/photo-1550985543-f47f38aecd60?auto=format&fit=crop&q=80&w=800" alt="Bee colony interaction" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-700">
+            <div>
+                <img src="https://images.unsplash.com/photo-1542840138-45e4c072d21d?auto=format&fit=crop&q=80&w=800" alt="Young larvae" class="rounded-3xl shadow-lg">
             </div>
         </section>
 
-        <section id="conservation" class="glass rounded-3xl p-8 md:p-16 border-t-4 border-amber-500">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold mb-4 italic">"Why Save the Swarm?"</h2>
-                <p class="text-slate-400">The ecological consequences of eradication far outweigh the temporary convenience.</p>
-            </div>
-
+        <!-- Critical Conservation -->
+        <section data-aos="flip-up" class="glass px-12 py-12 rounded-3xl">
+            <h2 class="text-4xl font-bold text-center mb-6">Why Insects Matter</h2>
             <div class="grid md:grid-cols-3 gap-8 text-center">
-                <div class="p-6">
+                <div class="info-card p-6 rounded-xl">
                     <i class="fas fa-seedling text-4xl text-amber-500 mb-6"></i>
-                    <h3 class="text-xl font-bold mb-3">Pollination API</h3>
-                    <p class="text-sm text-slate-500 leading-relaxed">
-                        Insects handle 75% of global crop fertilization. Eradication equals a global food security breach.
-                    </p>
+                    <h3 class="text-xl font-bold mb-4">Pollination</h3>
+                    <p>Responsible for 75% of crop fertilization—eradicating insects would breach global food security.</p>
                 </div>
-                <div class="p-6">
+                <div class="info-card p-6 rounded-xl">
                     <i class="fas fa-recycle text-4xl text-amber-500 mb-6"></i>
-                    <h3 class="text-xl font-bold mb-3">Waste Management</h3>
-                    <p class="text-sm text-slate-500 leading-relaxed">
-                        Without scavenger insects, the world loses its primary decomposers. They are the earth's natural janitors.
-                    </p>
+                    <h3 class="text-xl font-bold mb-4">Decomposition</h3>
+                    <p>Insects keep natural systems in balance by recycling organic matter into usable nutrients.</p>
                 </div>
-                <div class="p-6">
+                <div class="info-card p-6 rounded-xl">
                     <i class="fas fa-project-diagram text-4xl text-amber-500 mb-6"></i>
-                    <h3 class="text-xl font-bold mb-3">Foundation Species</h3>
-                    <p class="text-sm text-slate-500 leading-relaxed">
-                        They sit at the base of the food web. Removing them collapses the bird, reptile, and small mammal populations.
-                    </p>
+                    <h3 class="text-xl font-bold mb-4">Eco-Web Stability</h3>
+                    <p>As foundational species, they uphold populations of birds, small mammals, and more.</p>
                 </div>
             </div>
-        </section>
-
-        <section class="space-y-12">
-            <h2 class="text-3xl font-bold text-center">Social System Architecture</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-                <div class="glass p-6 rounded-2xl border-l-2 border-orange-500">
-                    <span class="text-xs uppercase tracking-widest text-slate-500">The Kernel</span>
-                    <h4 class="text-xl font-bold mt-2">The Queen</h4>
-                    <p class="text-sm mt-3 text-slate-400 italic">Centralized reproduction, but decentralized control.</p>
-                </div>
-                <div class="glass p-6 rounded-2xl border-l-2 border-blue-500">
-                    <span class="text-xs uppercase tracking-widest text-slate-500">The Middleware</span>
-                    <h4 class="text-xl font-bold mt-2">The Workers</h4>
-                    <p class="text-sm mt-3 text-slate-400">Fluid role transitions based on environmental demand.</p>
-                </div>
-                <div class="glass p-6 rounded-2xl border-l-2 border-red-500">
-                    <span class="text-xs uppercase tracking-widest text-slate-500">The Firewall</span>
-                    <h4 class="text-xl font-bold mt-2">The Soldiers</h4>
-                    <p class="text-sm mt-3 text-slate-400">Altruistic defense logic prioritized over self-preservation.</p>
-                </div>
-                <div class="glass p-6 rounded-2xl border-l-2 border-emerald-500">
-                    <span class="text-xs uppercase tracking-widest text-slate-500">The Cache</span>
-                    <h4 class="text-xl font-bold mt-2">The Larvae</h4>
-                    <p class="text-sm mt-3 text-slate-400">Future workforce development and energy storage.</p>
-                </div>
+            <div class="text-center mt-8">
+                <a href="conservation.html" class="px-6 py-2 bg-amber-500 text-black font-bold rounded-full shadow hover:bg-amber-600">
+                    Read More
+                </a>
             </div>
         </section>
 
     </main>
 
-    <footer class="mt-24 py-12 glass border-t border-white/10 text-center">
-        <p class="text-slate-500 text-sm">© 2026 Student Resource Portal | School of Computing Technology</p>
-        <p class="text-xs text-slate-600 mt-2 italic font-mono">Build Version 2.0.4 - Entomology Research Data</p>
+    <!-- Footer -->
+    <footer class="mt-24 py-12 text-center glass">
+        <p class="text-sm">© 2026 Educational Hub | Insects Research Network</p>
+        <p class="text-xs mt-2 italic font-mono">Version 3.1 | Powered by Data & Design</p>
+        <div class="text-amber-500 mt-4">
+            <i class="fab fa-facebook mx-2"></i>
+            <i class="fab fa-twitter mx-2"></i>
+            <i class="fab fa-instagram mx-2"></i>
+            <i class="fab fa-youtube mx-2"></i>
+        </div>
     </footer>
 
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
