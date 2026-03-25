@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insects: The Superorganism Study</title>
+    <style>
+        :root {
+            --primary: #f39c12;
+            --dark: #2c3e50;
+            --glass: rgba(255, 255, 255, 0.1);
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            color: #fff;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 0;
+            border-bottom: 1px solid var(--glass);
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .glass-card {
+            background: var(--glass);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 25px;
+            transition: transform 0.3s ease;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        h2 { color: var(--primary); }
+
+        .lifecycle-step {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .step-num {
+            background: var(--primary);
+            color: var(--dark);
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            margin-right: 15px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 0.9em;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Entomology: Life & Generations</h1>
+        <p>Exploring the complex social architecture of the insect world.</p>
+    </header>
+
+    <div class="card-grid">
+        <div class="glass-card">
+            <h2>The Life Cycle</h2>
+            <div class="lifecycle-step">
+                <div class="step-num">1</div>
+                <div><strong>Egg:</strong> The genetic blueprint of the colony.</div>
+            </div>
+            <div class="lifecycle-step">
+                <div class="step-num">2</div>
+                <div><strong>Larva:</strong> The growth phase; focused entirely on eating.</div>
+            </div>
+            <div class="lifecycle-step">
+                <div class="step-num">3</div>
+                <div><strong>Pupa:</strong> The biological "re-coding" into adult form.</div>
+            </div>
+            <div class="lifecycle-step">
+                <div class="step-num">4</div>
+                <div><strong>Adult:</strong> Specialization into workers, soldiers, or royalty.</div>
+            </div>
+        </div>
+
+        <div class="glass-card">
+            <h2>Social Hierarchy</h2>
+            <p><strong>The Queen:</strong> The reproductive heart of the family.</p>
+            <p><strong>Workers:</strong> The infrastructure and maintenance crew.</p>
+            <p><strong>Soldiers:</strong> Specialized defense mechanisms.</p>
+            <p><strong>Drones:</strong> Genetic couriers for future generations.</p>
+        </div>
+    </div>
+
+    <div class="glass-card" style="margin-top: 20px;">
+        <h2>The Collective Intelligence</h2>
+        <p>Unlike humans who act as individuals, social insects function as a <strong>Superorganism</strong>. Every action—from cooling the hive to building bridges—is done through decentralized "Pheromone Logic." No one is in charge, yet everything gets done perfectly.</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Student Resource Portal | Research & Development</p>
+    </footer>
+</div>
+
+</body>
+</html>
